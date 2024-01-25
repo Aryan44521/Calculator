@@ -1,0 +1,57 @@
+<!-- component -->
+<!DOCTYPE html>
+
+<body>
+  <div class="outer">
+    <div class="subOuter">
+
+      <div class="inner1">
+        <div *ngIf="showHistory"  class="history">
+          <div class="expression"> 
+            <div *ngFor="let item of history">{{item}}</div>
+          </div>
+        </div>
+        <div *ngIf="!showHistory">
+          <div class="expression">{{expression}}</div>
+          <div class="resultvalue">{{resultValue}}</div>
+        </div>
+      </div>
+      <div class="w-auto m-1 h-auto mb-2">
+        <div class="row">
+          <div (click)="clear()" class="calcButtons">C</div>
+
+
+          <div (click)="feedOperand('/')" class="calcButtons">/</div>
+        </div>
+        <div class="row">
+          <div (click)="feedNumber(7)" class="calcButtons">7</div>
+          <div (click)="feedNumber(8)" class="calcButtons">8</div>
+          <div (click)="feedNumber(9)" class="calcButtons">9</div>
+          <div (click)="feedOperand('x')" class="calcButtons">x</div>
+        </div>
+        <div class="row">
+          <div (click)="feedNumber(4)" class="calcButtons">4</div>
+          <div (click)="feedNumber(5)" class="calcButtons">5</div>
+          <div (click)="feedNumber(6)" class="calcButtons">6</div>
+          <div (click)="feedOperand('-')" class="calcButtons">-</div>
+        </div>
+        <div class="row">
+          <div (click)="feedNumber(1)" class="calcButtons">1</div>
+          <div (click)="feedNumber(2)" class="calcButtons">2</div>
+          <div (click)="feedNumber(3)" class="calcButtons">3</div>
+          <div (click)="feedOperand('+')" class="calcButtons">+</div>
+        </div>
+        <div class="row">
+          <div (click)="feedNumber(0)" class="calcButtons">0</div>
+          <div (click)="toggleDecimal()" class="calcButtons">.</div>
+          <div (click)="getResult()" class="calcButtons">=</div>
+          <div (click)="toggleHistory()" class="calcButtons">H</div>
+
+        </div>
+        <div class="flex justify-center mt-5">
+          <div class="w-20 h-1 bg-gray-100 rounded-l-xl rounded-r-xl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

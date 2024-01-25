@@ -1,0 +1,73 @@
+.outer{
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subOuter {
+    width: 24rem;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
+    border-width: 4px;
+    border-color: #cbd5e0;
+  }
+
+  
+.inner1 {
+  width: auto;
+  margin: 0.75rem;
+  height: 7rem;
+  text-align: right;
+  line-height: 2;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.expression{
+    color: #4a5568;
+}
+
+.resultvalue {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.875rem; /* Equivalent to text-3xl in Tailwind CSS */
+  }
+
+
+  .calculator__keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+
+  .calcButtons {
+    background-color: #edf2f7;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 1rem;
+    width: 5rem;
+    height: 3rem;
+    color: #000;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .history {
+    max-height: 120px; /* Set your desired height */
+    overflow-y: auto;
+    border-radius: 1.5rem;
+  }
+  
+
